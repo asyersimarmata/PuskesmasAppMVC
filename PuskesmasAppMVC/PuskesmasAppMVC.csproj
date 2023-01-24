@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{337BCF41-9DF4-4B9D-903D-3D393498ED46}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PuskesmasAppMVC</RootNamespace>
+    <AssemblyName>PuskesmasAppMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\DokterController.cs" />
+    <Compile Include="Controller\JadwalDokterController.cs" />
+    <Compile Include="Controller\ObatController.cs" />
+    <Compile Include="Controller\PasienController.cs" />
+    <Compile Include="Controller\PenyakitController.cs" />
+    <Compile Include="Controller\ResepController.cs" />
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Model\Context\DbContext.cs" />
+    <Compile Include="Model\Entity\Dokter.cs" />
+    <Compile Include="Model\Entity\JadwalDokter.cs" />
+    <Compile Include="Model\Entity\Obat.cs" />
+    <Compile Include="Model\Entity\Pasien.cs" />
+    <Compile Include="Model\Entity\Penyakit.cs" />
+    <Compile Include="Model\Entity\Resep.cs" />
+    <Compile Include="Model\Repository\DokterRepository.cs" />
+    <Compile Include="Model\Repository\JadwalDokterRepository.cs" />
+    <Compile Include="Model\Repository\ObatRepository.cs" />
+    <Compile Include="Model\Repository\PasienRepository.cs" />
+    <Compile Include="Model\Repository\PenyakitRepository.cs" />
+    <Compile Include="Model\Repository\ResepRepository.cs" />
+    <Compile Include="Model\Repository\UserRepository.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FrmDokter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmDokter.Designer.cs">
+      <DependentUpon>FrmDokter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmEntryDokter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEntryDokter.Designer.cs">
+      <DependentUpon>FrmEntryDokter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmEntryObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEntryObat.Designer.cs">
+      <DependentUpon>FrmEntryObat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmEntryPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEntryPasien.Designer.cs">
+      <DependentUpon>FrmEntryPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmJadwalDokter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmJadwalDokter.Designer.cs">
+      <DependentUpon>FrmJadwalDokter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLaporanDokter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLaporanDokter.Designer.cs">
+      <DependentUpon>FrmLaporanDokter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLaporanPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLaporanPasien.Designer.cs">
+      <DependentUpon>FrmLaporanPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmObat.Designer.cs">
+      <DependentUpon>FrmObat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmPasien.Designer.cs">
+      <DependentUpon>FrmPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmPenyakit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmPenyakit.Designer.cs">
+      <DependentUpon>FrmPenyakit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmResep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmResep.Designer.cs">
+      <DependentUpon>FrmResep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmUtama.Designer.cs">
+      <DependentUpon>FrmUtama.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\FrmDokter.resx">
+      <DependentUpon>FrmDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmEntryDokter.resx">
+      <DependentUpon>FrmEntryDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmEntryObat.resx">
+      <DependentUpon>FrmEntryObat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmEntryPasien.resx">
+      <DependentUpon>FrmEntryPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmJadwalDokter.resx">
+      <DependentUpon>FrmJadwalDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLaporanDokter.resx">
+      <DependentUpon>FrmLaporanDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLaporanPasien.resx">
+      <DependentUpon>FrmLaporanPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmObat.resx">
+      <DependentUpon>FrmObat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmPasien.resx">
+      <DependentUpon>FrmPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmPenyakit.resx">
+      <DependentUpon>FrmPenyakit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmResep.resx">
+      <DependentUpon>FrmResep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmUtama.resx">
+      <DependentUpon>FrmUtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+</Project>
